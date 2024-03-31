@@ -18,9 +18,6 @@ Funciones Del Sistema Versión 001:
 
 URL Desarrollo De Actividad 
 ----
-http://3.148.102.49/#login    
-Debe Registrar Usuario Para Ingresar
-
 
 <br/>
 
@@ -50,7 +47,7 @@ Arquitectura Cliente - Servidor
 Infraestructura Del Proyecto
 ====
 
-+ Servicio Cloud AWS       
+    
 + Servidor Ubuntu 22.04 LTS
 + Node JS
 + Local MongoDB
