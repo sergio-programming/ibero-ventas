@@ -1,0 +1,468 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>API Cliente Ibero Ventas</title><link rel="stylesheet" href="b4419d61fe0ad472756d.css"/><script defer="defer" src="bundle.js"></script></head><body><script type="text/template" id="tmp_login"><h1>LOGIN</h1>
+			<form>
+				<div class="text writing">
+				<input type="text" id="cedula" name="cedula" required>
+				<label for="cedula">Número de cedula</label>
+				<span></span>
+				<p class='help-error' data-alert='cedula'></p>
+				</div>
+
+				<div class="password writing">
+				<input type="password" id="clave" name="clave">
+				<label for="clave">Contraseña</label>
+				<span></span>
+				<p class='help-error' data-alert='clave'></p>
+				</div>
+
+				<div class="submit">
+				<br/>
+				<button type="button" name='btnEnviar' id='btnEnviar'>Enviar</button>
+				<br/> <br/>
+				<div class='list-group'><a href='#' type="button" name='btnRegistrar' id='btnRegistrar'>Registrar usuario</a></div>
+				<div class='list-group'><a href='#' type="button" name='btnRecuperar' id='btnRecuperar'>Olvido la clave, la puedes recuperar aquí</a></div>
+				<div class='list-group'><a href='#' type="button" name='btnCambioClave' id='btnCambioClave'>Cambiar su clave aquí</a></div>
+				</div>
+			</form></script><script type="text/template" id="tmp_signup"><h1>REGISTRAR</h1>
+			<form>
+
+				<div class="text writing">
+				<input type="text" id="cedula" name="cedula" required>
+				<label for="nombre">Cedula*</label>
+				<span></span>
+				<p class='help-error' data-alert='cedula'></p>
+				</div>
+
+				<div class="text writing">
+				<input type="text" id="nombres" name="nombres" required>
+				<label for="nombre">Nombres*</label>
+				<span></span>
+				<p class='help-error' data-alert='nombres'></p>
+				</div>
+
+				<div class="text writing">
+				<input type="text" id="apellidos" name="apellidos" required>
+				<label for="nombre">Apellidos*</label>
+				<span></span>
+				<p class='help-error' data-alert='apellidos'></p>
+				</div>
+
+				<div class="text writing">
+				<input type="text" id="email" name="email" required>
+				<label for="nombre">Email*</label>
+				<span></span>
+				<p class='help-error' data-alert='email'></p>
+				</div>
+
+				<div class="password writing">
+					<input type="number" id="celular" name="celular">
+					<label for="contrasena">Celular</label>
+					<span></span>
+					<p class='help-error' data-alert='celular'></p>
+				</div>
+
+				<div class="password writing">
+				<input type="password" id="clave" name="clave">
+				<label for="contrasena">Contraseña*</label>
+				<span></span>
+				<p class='help-error' data-alert='clave'></p>
+				</div>
+
+				<div class="submit">
+				<br/>
+				<button type="button" class='active' name='btnEnviar' id='btnEnviar'>Enviar</button>
+				<br/> <br/>
+				<div class='list-group'><a href='#' type="button" name='btnLogin' id='btnLogin'>Login de usuario</a></div>
+				<div class='list-group'><a href='#' type="button" name='btnRecuperar' id='btnRecuperar'>Olvido la clave, la puedes recuperar aquí</a></div>
+				<div class='list-group'><a href='#' type="button" name='btnCambioClave' id='btnCambioClave'>Cambiar su clave aquí</a></div>
+				</div>
+			</form></script><script type="text/template" id="tmp_change_pass"><h1>CAMBIAR DE CLAVE</h1>
+			<form>
+				<div class="text writing">
+				<input type="text" id="cedula" name="cedula" required>
+				<label for="cedula">Cedula</label>
+				<span></span>
+				<p class='help-error' data-alert='cedula'></p>
+				</div>
+
+				<div class="password writing">
+				<input type="password" id="clave_old" name="clave_old">
+				<label for="contrasena">Contraseña actual</label>
+				<span></span>
+				<p class='help-error' data-alert='clave_old'></p>
+				</div>
+
+				<div class="password writing">
+				<input type="password" id="clave_new" name="clave_new">
+				<label for="contrasena">Contraseña nueva</label>
+				<span></span>
+				<p class='help-error' data-alert='clave_new'></p>
+				</div>
+
+				<div class="submit">
+				<br/>
+				<button type="button" name='btnEnviar' id='btnEnviar'>Enviar</button>
+				<br/> <br/>
+				<div class='list-group'><a href='#' type="button" name='btnLogin' id='btnLogin'>Login de usuario</a></div>
+				<div class='list-group'><a href='#' type="button" name='btnRegistrar' id='btnRegistrar'>Registrar usuario</a></div>
+				<div class='list-group'><a href='#' type="button" name='btnRecuperar' id='btnRecuperar'>Olvido la clave, la puedes recuperar aquí</a></div>
+				</div>
+			</form></script><script type="text/template" id="tmp_recovery_user"><h1>OLVIDO LA CLAVE</h1>
+			<form>
+				<div class="text writing">
+				<input type="text" id="cedula" name="cedula" required>
+				<label for="nombre">Cedula</label>
+				<span></span>
+				<p class='help-error' data-alert='cedula'></p>
+				</div>
+
+				<div class="text writing">
+				<input type="text" id="email" name="email" required>
+				<label for="nombre">Email</label>
+				<span></span>
+				<p class='help-error' data-alert='email'></p>
+				</div>
+
+				<div class="submit">
+				<br/>
+				<button type="button" name='btnEnviar' id='btnEnviar'>Enviar</button>
+				<br/> <br/>
+				<div class='list-group'><a href='#' type="button" name='btnLogin' id='btnLogin'>Login de usuario</a></div>
+				<div class='list-group'><a href='#' type="button" name='btnRegistrar' id='btnRegistrar'>Registrar usuario</a></div>
+				<div class='list-group'><a href='#' type="button" name='btnCambioClave' id='btnCambioClave'>Cambiar su clave aquí</a></div>
+				</div>
+			</form></script><script type="text/template" id="tmp_perfil"><div class='card'>
+				<div class='card-header'>
+					<div class='list-group'><a href='#' type='button' id='btnClose'>X</a></div>
+					<br/>
+					<h2>Bienvenido <br/><small><%=username%></small></h2>
+					<br/>
+					<div class="card-img">
+						<img src="<%=avatar%>" width='120px' alt="avatar">
+					</div>
+				</div>
+				<div class='card-body'>
+					<div class='form-group'>
+						<label>Email: <%=email%></label>
+					</div>
+					<div class='form-group'>
+						<label>Identificación: <%=cedula%></label>
+					</div>
+					<a href='#' type='button' id='btnWorker'>Vamos a trabajar<br/><br/>
+						<img src="coffee.jpg" alt="coffee" width="250px" style='border-radius:10%'>
+					</a>
+
+				</div>
+			</div></script><script type="text/template" id="tmp_venta_table"><div class='card'>
+				<div class='list-group'><a href='#' class='close' type='button' id='btnClose'><span>X</span></a><div>
+				<br/>
+				<div class='card-header'>
+					<h2>Ultimas Ventas Del Día</h2>
+					<p><%=username%></p>
+					<br/>
+					<div class="card-img">
+						<img src="<%=avatar%>" width='120px' alt="avatar">
+					</div>
+				</div>
+				<div class='card-body'>
+					<table class='table' cellspacing='0' cellpadding='0'>
+						<thead>
+							<tr>
+								<td>Fecha</td>
+								<td>Productos</td>
+								<td>Cliente</td>
+								<td>Total pago</td>
+								<td>Cantidad</td>
+								<td>Usuario</td>
+								<td colspan='3'>Opciones</td>
+							</tr>
+						</thead>
+						<tbody id='showRowsTable'></tbody>
+					</table>
+					<br/>
+					<a href='#' type='button' id='btnPerfil'><span>Ver Perfil</span></a>
+					<button type='button' id='btnPlus' class='btn-md green'>Crear Ventas +</button>
+					<br/>
+				</div>
+			</div></script><script type="text/template" id="tmp_rows_venta_firmeza"><td><%= fecha %></td>
+			<td><%= _.size(detalles) %></td>
+			<td><%= cliente.nombres + ' ' + cliente.apellidos %></td>
+			<td><%= valor%></td>
+			<td><%= _.size(detalles) %></td>
+			<td><%= user.nombres + ' ' + user.apellidos %></td>
+			<td><button type='button' data-toggle='showDetalle' data-id='<%=_id%>' class='btn-sm blue'>Detalles</button></td>
+			<td><button type='button' data-toggle='editDetalle' data-id='<%=_id%>' class='btn-sm orange'>Editar</button></td>
+			<td><button type='button' data-toggle='trashDetalle' data-id='<%=_id%>' class='btn-sm red'>Borrar</button></td></script><script type="text/template" id="tmp_venta_create"><div class='card-header'>
+				<h2>REGISTRAR VENTA</h2>
+				<br/>
+				<div class="card-img">
+					<img src="<%=avatar%>" width='80px' alt="avatar">
+				</div>
+			</div>
+			<div class='card-body'>
+				<form>
+					<input type='text' style='display:none' id="user_id" name="user_id" value='<%=cedula%>'/>
+					<div class="text writing">
+						<input type="text" id="cliente_cedula" name="cliente_cedula" required/>
+						<label for="nombre">Cedula cliente</label>
+						<span></span>
+						<p class='help-error' data-alert='cliente_cedula'></p>
+					</div>
+					<div class="text writing">
+						<input type="text" id="cliente_nombre" name="cliente_nombre" required/>
+						<label for="nombre">Nombre cliente</label>
+						<span></span>
+						<p class='help-error' data-alert='cliente_nombre'></p>
+					</div>
+
+					<div class="text date">
+						<input type="date" id="fecha" name="fecha" required>
+						<label for="fecha">Fecha*</label>
+						<span></span>
+						<p class='help-error' data-alert='fecha'></p>
+					</div>
+
+					<div class="text writing">
+						<input type="text" id="valor" name="valor" required>
+						<label for="nombre">Valor*</label>
+						<span></span>
+						<p class='help-error' data-alert='valor'></p>
+					</div>
+
+					<div class="select">
+						<label class="titulo">Productos</label>
+						<div class="view" style='width:100%'>
+						  <select id="ciudad" name="ciudad" multiple style='width:100%'>
+							<option value="1">Cafe con leche</option>
+							<option value="2">Pan Sandwich</option>
+							<option value="3">Cafe Capuchino De la Casa</option>
+							<option value="4">Waffles De Avena</option>
+							<option value="5">Tamal De la Casa</option>
+							<option value="6">Gaseosa Cola Cola 350</option>
+							<option value="7">Gaseosa Manzana Postobon 350</option>
+						  </select>
+						</div>
+					  </div>
+
+					<div class="number">
+						<label class="titulo">Unidades</label>
+						<div class="numero">
+						  <label for="numero" class="decrement" data-toggle='decrement'"><svg viewBox="0 0 448 512" fill="white">
+							  <path
+								d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+							</svg></label>
+						  <input type="number" id="numero" name="numero" min="1" max="9999999" value='1'>
+						  <label for="numero" class="increment" data-toggle='increment'><svg viewBox="0 0 448 512" fill="white">
+							  <path
+								d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+							</svg></label>
+						</div>
+					</div>
+
+					<div class="radio">
+						<label data-toggle='toggle_seleccion1'" for="opcion1">
+						  <input type="radio" name="opcion" value="C" id="opcio1">
+						  <div class="view"></div> Cancelado
+						</label>
+						<label data-toggle='toggle_seleccion2'">
+						  <input type="radio" name="opcion" value="P">
+						  <div class="view"></div> Pendiente
+						</label>
+					</div>
+
+					<div class="submit">
+						<br/>
+						<button type="button" class='active' name='btnEnviar' id='btnEnviar'>Enviar</button>
+						<br/> <br/>
+						<a href='#' type="button" name='btnRegresar' id='btnRegresar'>Regresar</a>
+					</div>
+				</form>
+			</div></script><script type="text/template" id="tmp_venta_edita"><div class='card-header'>
+				<h2>EDITA LA VENTA</h2>
+				<br/>
+				<div class="card-img">
+					<img src="<%=avatar%>" width='80px' alt="avatar">
+				</div>
+			</div>
+			<div class='card-body'>
+				<form>
+					<input type='text' style='display:none' id="user_id" name="user_id" value='<%=cedula%>'/>
+					<div class="text writing">
+						<input type="text" id="cliente_cedula" name="cliente_cedula" required/>
+						<label for="nombre">Cedula cliente</label>
+						<span></span>
+						<p class='help-error' data-alert='cliente_cedula'></p>
+					</div>
+					<div class="text writing">
+						<input type="text" id="cliente_nombre" name="cliente_nombre" required/>
+						<label for="nombre">Nombre cliente</label>
+						<span></span>
+						<p class='help-error' data-alert='cliente_nombre'></p>
+					</div>
+
+					<div class="text date">
+						<input type="date" id="fecha" name="fecha" required value='<%=fecha%>'>
+						<label for="fecha">Fecha*</label>
+						<span></span>
+						<p class='help-error' data-alert='fecha'></p>
+					</div>
+
+					<div class="text writing">
+						<input type="text" id="valor" name="valor" required value='<%= valor%>'>
+						<label for="nombre">Valor*</label>
+						<span></span>
+						<p class='help-error' data-alert='valor'></p>
+					</div>
+
+					<div class="select">
+						<label class="titulo">Productos</label>
+						<div class="view" style='width:100%'>
+						  <select id="ciudad" name="ciudad" multiple style='width:100%'>
+							<option value="1">Cafe con leche</option>
+							<option value="2">Pan Sandwich</option>
+							<option value="3">Cafe Capuchino De la Casa</option>
+							<option value="4">Waffles De Avena</option>
+							<option value="5">Tamal De la Casa</option>
+							<option value="6">Gaseosa Cola Cola 350</option>
+							<option value="7">Gaseosa Manzana Postobon 350</option>
+						  </select>
+						</div>
+					</div>
+
+					<div class="number">
+						<label class="titulo">Unidades</label>
+						<div class="numero">
+						  <label for="numero" class="decrement" data-toggle='decrement'"><svg viewBox="0 0 448 512" fill="white">
+							  <path
+								d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+							</svg></label>
+						  <input type="number" id="numero" name="numero" min="1" max="9999999" value='1'>
+						  <label for="numero" class="increment" data-toggle='increment'><svg viewBox="0 0 448 512" fill="white">
+							  <path
+								d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+							</svg></label>
+						</div>
+					</div>
+
+					<div class="radio">
+						<label data-toggle='toggle_seleccion1'" for="opcion1">
+						  <input type="radio" name="opcion" value="C" id="opcio1">
+						  <div class="view"></div> Cancelado
+						</label>
+						<label data-toggle='toggle_seleccion2'">
+						  <input type="radio" name="opcion" value="P">
+						  <div class="view"></div> Pendiente
+						</label>
+					</div>
+
+					<div class="submit">
+						<br/>
+						<button type="button" class='active' name='btnEnviar' id='btnEnviar'>Enviar</button>
+						<br/> <br/>
+						<a href='#' type="button" name='btnRegresar' id='btnRegresar'>Regresar</a>
+					</div>
+				</form>
+			</div></script><script type="text/template" id="tmp_venta_show"><div class='card'>
+				<div class='card-header'>
+					<h2>DETALLE VENTA</h2>
+					<br/>
+					<div class="card-img">
+						<img src="<%=avatar%>" width='80px' alt="avatar">
+					</div>
+				</div>
+				<div class='card-body'>
+					<div class="text writing">
+						<label for="nombre">FECHA: <%= fecha%></label>
+					</div>
+					<div class="text writing">
+						<label for="nombre">USUARIO: <%= cedula%></label>
+					</div>
+					<div class="text writing">
+						<label for="nombre">VALOR: <%= valor%></label>
+					</div>
+					<div class="text writing">
+						<label for="nombre">CLIENTE <%= cliente_name%></label>
+					</div>
+					<div class="submit">
+
+						<br/> <br/>
+						<a href='#' type="button" name='btnRegresar' id='btnRegresar'>Regresar</a>
+					</div>
+				</div>
+			</div></script><script type="text/template" id="tmp_tabs_content"><div class="page-content">
+				<nav>
+					<ul class="tabs">
+						<li class="tab-li">
+							<a data-href="#tab1" class="tab-li__link">TAB #1</a>
+						</li>
+						<li class="tab-li">
+							<a data-href="#tab2" class="tab-li__link">TAB #2</a>
+						</li>
+						<li class="tab-li">
+							<a data-href="#tab3" class="tab-li__link">TAB #3</a>
+						</li>
+					</ul>
+				</nav>
+
+				<section id="tab1" data-tab-content>
+					<p class="tab__content">
+					TAB 1 section
+					</p>
+					<article>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue mauris nibh, ac porta lorem volutpat sed. Maecenas accumsan lectus neque, a vehicula risus ullamcorper at. Aenean maximus consectetur leo, nec vulputate ex imperdiet quis. Sed quis mi ut ligula sollicitudin volutpat id ut est. Etiam a pellentesque eros. Duis sit amet posuere erat. Ut maximus eleifend hendrerit. Suspendisse at suscipit diam.
+					</article>
+				</section>
+
+				<section id="tab2" data-tab-content class="">
+					<p class="tab__content">
+					TAB 2 section
+					</p>
+					<article>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue mauris nibh, ac porta lorem volutpat sed. Maecenas accumsan lectus neque, a vehicula risus ullamcorper at. Aenean maximus consectetur leo, nec vulputate ex imperdiet quis. Sed quis mi ut ligula sollicitudin volutpat id ut est. Etiam a pellentesque eros. Duis sit amet posuere erat. Ut maximus eleifend hendrerit. Suspendisse at suscipit diam.
+					</article>
+				</section>
+
+				<section id="tab3" data-tab-content class="">
+					<p class="tab__content">
+						TAB 3 section
+					</p>
+
+					<nav>
+						<ul class="tabs">
+							<li class="tab-li">
+							<a data-href="#nested1" class="tab-li__link">Nested1</a>
+							</li>
+							<li class="tab-li">
+							<a data-href="#nested2" class="tab-li__link">Nested2</a>
+							</li>
+							<li class="tab-li">
+							<a data-href="#nested3" class="tab-li__link">Nested3</a>
+							</li>
+						</ul>
+					</nav>
+
+					<section id="nested1" data-tab-content>
+						<p class="tab__content">
+							Nested-1 section
+						</p>
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue mauris nibh, ac porta lorem volutpat sed. Maecenas accumsan lectus neque, a vehicula risus ullamcorper at. Aenean maximus consectetur leo, nec vulputate ex imperdiet quis. Sed quis mi ut ligula sollicitudin volutpat id ut est. Etiam a pellentesque eros. Duis sit amet posuere erat. Ut maximus eleifend hendrerit. Suspendisse at suscipit diam.
+						</article>
+						</section>
+						<section id="nested2" data-tab-content>
+						<p class="tab__content">
+							Nested-2 section
+						</p>
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue mauris nibh, ac porta lorem volutpat sed. Maecenas accumsan lectus neque, a vehicula risus ullamcorper at. Aenean maximus consectetur leo, nec vulputate ex imperdiet quis. Sed quis mi ut ligula sollicitudin volutpat id ut est. Etiam a pellentesque eros. Duis sit amet posuere erat. Ut maximus eleifend hendrerit. Suspendisse at suscipit diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue mauris nibh, ac porta lorem volutpat sed. Maecenas accumsan lectus neque, a vehicula risus ullamcorper at. Aenean maximus consectetur leo, nec vulputate ex imperdiet quis. Sed quis mi ut ligula sollicitudin volutpat id ut est. Etiam a pellentesque eros. Duis sit amet posuere erat. Ut maximus eleifend hendrerit. Suspendisse at suscipit diam.
+						</article>
+						</section>
+						<section id="nested3" data-tab-content>
+						<p class="tab__content">
+							Nested-3 section
+						</p>
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue mauris nibh, ac porta lorem volutpat sed. Maecenas accumsan lectus neque, a vehicula risus ullamcorper at. Aenean maximus consectetur leo, nec vulputate ex imperdiet quis. Sed quis mi ut ligula sollicitudin volutpat id ut est. Etiam a pellentesque eros. Duis sit amet posuere erat. Ut maximus eleifend hendrerit. Suspendisse at suscipit diam.
+						</article>
+					</section>
+				</section>
+			</div></script><div id="app"></div></body></html>

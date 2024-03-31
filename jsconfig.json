@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "bundler",
+		"target": "ES5",
+		"module": "ES2015",
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"checkJs": true
+	},
+	"include": ["src/**/*.js"],
+	"exclude": ["src/**/*.d.ts", "node_modules/**/*.js", "src/global.js", "public/**/*.js"]
+}
