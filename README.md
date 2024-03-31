@@ -3,7 +3,6 @@
 
 * Proyecto Coffee Ibero Ventas
 * Grupo De Trabajo:
-    *  EDWIN ANDRES LEGRO AGUDELO
     *  SERGIO ALBERTO PEDRAZA
 
 Funciones Del Sistema Versión 001:
@@ -81,7 +80,6 @@ Herramientas De Desarrollo
 Modelo del Servidor
 ===
 
-![image 1](http://3.148.102.49/g1.png)
 
 Servidor: <small>(Definición)</small>
 ----
@@ -94,8 +92,6 @@ Servidor: <small>(Definición)</small>
 
 Modelo del Cliente
 ===
-
-![image 2](http://3.148.102.49/g2.png)
 
 <br/>
 
